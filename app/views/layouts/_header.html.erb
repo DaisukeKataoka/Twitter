@@ -1,0 +1,26 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<nav>
+			<!-- <%= link_to "sample app", '#', id: "logo" %> -->
+			<%= link_to image_tag('logo.jpg', { :border => '0'}), root_path %>
+			<% if user_signed_in? %>
+				<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to "ようこそ #{current_user.username} さん", pages_show_path %></li>
+				<li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+				<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+				</ul>
+			<% else %>
+				<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to 'サインアップ', new_user_registration_path %></li>
+				<li><%= link_to 'ログイン', new_user_session_path %></li>
+				</ul>
+			<% end %>
+		</nav>
+	</div>
+</header>
+<div class="container">
+	<!-- Loginした時に上の方にメッセージがでる -->
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	<%= yield %>
+</div>
