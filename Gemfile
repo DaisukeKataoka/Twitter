@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Devise
 gem 'devise'
+gem 'twitter'
 gem 'omniauth-twitter'
 
 group :development, :test do
