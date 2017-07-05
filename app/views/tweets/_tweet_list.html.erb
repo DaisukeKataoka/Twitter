@@ -1,10 +1,16 @@
 <% if @tweets.present? %>
-	<h2>検索結果</h2>
-	<ul>
+	<h2>Search Result</h2>
+	<table class="table table-striped">
+		<tr><th>Rank</th><th>Content</th>
+		<% @tweets.each_with_index do |tweet, i| %>
+		<tr><td><%= i+1 %></td><td><%= tweet.contents %> </td></tr>
+		<% end %>
+	</table>
+	<!-- <ul class="list-group">
 		<% @tweets.each_with_index do |tweet, i| %>
 		<div class="list">
-			<li>Tweet<%= i+1 %>: <%= tweet.contents %> </li>
+			<li class="list-group-item">Tweet<%= i+1 %>: <%= tweet.contents %> </li>
 		</div>
 		<% end %>
-	</ul>
+	</ul> -->
 <% end %>
