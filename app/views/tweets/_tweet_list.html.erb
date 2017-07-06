@@ -2,9 +2,12 @@
 	<h2>Search Result</h2>
 	<table class="table table-striped">
 		<tr><th>Rank</th><th>Content</th>
+		<% len = 0 %>
 		<% @tweets.each_with_index do |tweet, i| %>
 		<tr><td><%= i+1 %></td><td><%= tweet.contents %> </td></tr>
+		<% len += 1%>
 		<% end %>
+		<tr><%= "Total: #{len} tweets" %></tr>
 	</table>
 	<!-- <ul class="list-group">
 		<% @tweets.each_with_index do |tweet, i| %>
