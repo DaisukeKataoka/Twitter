@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Q:</strong>
+  <%= @query.q_id %>
+</p>
+
+<p>
+  <strong>Content query:</strong>
+  <%= @query.content_query %>
+</p>
+
+<p>
+  <strong>Context query:</strong>
+  <%= @query.context_query %>
+</p>
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', queries_path %>

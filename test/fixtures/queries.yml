@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  q_id: 1
+  content_query: MyString
+  context_query: MyString
+
+two:
+  q_id: 1
+  content_query: MyString
+  context_query: MyString

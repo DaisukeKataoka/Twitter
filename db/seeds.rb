@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Query.create(
+	q_id:1,
+	content_query:"Rails 課題",
+	context_query:"京都大学 学生"
+)

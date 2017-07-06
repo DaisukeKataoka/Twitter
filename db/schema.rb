@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705141450) do
+ActiveRecord::Schema.define(version: 20170706045740) do
+
+  create_table "queries", force: :cascade do |t|
+    t.integer  "q_id"
+    t.string   "content_query"
+    t.string   "context_query"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

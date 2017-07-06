@@ -5,7 +5,6 @@ class TweetsController < ApplicationController
 			config.consumer_key				 = Rails.application.secrets.twitter_consumer_key
 			config.consumer_secret		= Rails.application.secrets.twitter_consumer_secret
 		end
-		@count = 0
 		@tweets = []
 		since_id = nil
 		# 検索ワードが存在していたらツイートを取得
@@ -17,7 +16,6 @@ class TweetsController < ApplicationController
 				tweet = Tweet.new(tw.full_text)
 				@tweets << tweet
 			end
-			@count = @tweets.length
 		end
 		respond_to do |format|
 			format.html #show.html.erb
