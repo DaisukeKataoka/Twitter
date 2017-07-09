@@ -21,4 +21,4 @@
 .byebug_history
 
 # Ignore Byebug command history file.
-/congig/.secret.yml
+/config/.secret.yml
