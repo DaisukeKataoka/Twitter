@@ -20,5 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# Ignore Byebug command history file.
-/config/secret.yml
+# Ignore Config command history file.
+.project
+.DS_Store
+.idea
+.secret
